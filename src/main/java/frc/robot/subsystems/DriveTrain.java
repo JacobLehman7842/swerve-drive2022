@@ -20,10 +20,10 @@ public class DriveTrain extends SubsystemBase {
   private MotorController right2;
   private MotorController rotate;
   public DriveTrain() {
-    left1 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_LEFT1, MotorType.kBrushless);
-    left2 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_LEFT2, MotorType.kBrushless);
-    right1 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_RIGHT1, MotorType.kBrushless);
-    right2 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_RIGHT2, MotorType.kBrushless);
+    left1 = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT1, MotorType.kBrushless);
+    left2 = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT2, MotorType.kBrushless);
+    right1 = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT1, MotorType.kBrushless);
+    right2 = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT2, MotorType.kBrushless);
     rotate = new VictorSP(Constants.DriveTrain.DRIVE_PWM_ROTATE);
   }
 
