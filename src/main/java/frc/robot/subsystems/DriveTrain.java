@@ -16,7 +16,7 @@ import frc.robot.Constants;
 
 public class DriveTrain extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
-  private CANSparkMax[ ] driveMotors = new CANSparkMax[4];
+  private VictorSP[ ] driveMotors = new VictorSP[4];
   private Encoder rotateEncoder;
   private MotorController rotate;
   
@@ -25,10 +25,10 @@ public class DriveTrain extends SubsystemBase {
     rotate = new VictorSP(Constants.DriveTrain.DRIVE_PWM_ROTATE);
     rotateEncoder = new Encoder(Constants.DriveTrain.DRIVE_DIO_ENCODER1, Constants.DriveTrain.DRIVE_DIO_ENCODER2);
 
-    driveMotors[0] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT1, MotorType.kBrushless);
-    driveMotors[1] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT2, MotorType.kBrushless);
-    driveMotors[2] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT1, MotorType.kBrushless);
-    driveMotors[3] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT2, MotorType.kBrushless);
+    driveMotors[0] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_LEFT1);
+    driveMotors[1] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_LEFT2);
+    driveMotors[2] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_RIGHT1);
+    driveMotors[3] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_RIGHT2);
     
   }
   public void drive(double x, double y, double z){
