@@ -8,6 +8,7 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
+import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
@@ -17,11 +18,13 @@ public class DriveTrain extends SubsystemBase {
   private MotorController left2;
   private MotorController right1;
   private MotorController right2;
+  private MotorController rotate;
   public DriveTrain() {
     left1 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_LEFT1, MotorType.kBrushless);
     left2 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_LEFT2, MotorType.kBrushless);
     right1 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_RIGHT1, MotorType.kBrushless);
     right2 = new CANSparkMax(Constants.DriveTrain.DRIVE_PWM_RIGHT2, MotorType.kBrushless);
+    rotate = new VictorSP(Constants.DriveTrain.DRIVE_PWM_ROTATE);
   }
 
   @Override
