@@ -32,4 +32,9 @@ public final class Constants {
         public static final int DRIVE_CAN_RIGHT2 = 3;
         public static final int DRIVE_PWM_ROTATE = 4;
     }
+    public static class Controls{
+
+        public static final int CONTROLS_USB_JOYSTICK = 0;
+
+    }
 }

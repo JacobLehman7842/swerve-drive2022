@@ -24,11 +24,14 @@ public class DriveTrain extends SubsystemBase {
 
     rotate = new VictorSP(Constants.DriveTrain.DRIVE_PWM_ROTATE);
     rotateEncoder = new Encoder(Constants.DriveTrain.DRIVE_DIO_ENCODER1, Constants.DriveTrain.DRIVE_DIO_ENCODER2);
-    
+
     driveMotors[0] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT1, MotorType.kBrushless);
     driveMotors[1] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_LEFT2, MotorType.kBrushless);
     driveMotors[2] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT1, MotorType.kBrushless);
     driveMotors[3] = new CANSparkMax(Constants.DriveTrain.DRIVE_CAN_RIGHT2, MotorType.kBrushless);
+    
+  }
+  public void drive(double x, double y, double z){
     
   }
 
