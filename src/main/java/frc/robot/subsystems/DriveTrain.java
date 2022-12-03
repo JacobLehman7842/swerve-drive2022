@@ -32,7 +32,8 @@ public class DriveTrain extends SubsystemBase {
     
   }
   public void drive(double x, double y, double z){
-    
+    rotate.set(x*Constants.DriveTrain.ROTATE_SPEED_MODIFY);
+    forward(y*Constants.DriveTrain.MOTOR_SPEED_MODIFY);
   }
   public void forward(double speed){
     for(int i = 0; i < 4; i++){

@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.PS4Controller.Button;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.commands.Drive;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.Forward;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -40,6 +41,7 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    m_drivetrain.setDefaultCommand(new Drive(m_drivetrain, j_joystick));
     b_forward.whileHeld(new Forward(m_drivetrain));
   }
 

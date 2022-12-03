@@ -31,6 +31,8 @@ public final class Constants {
         public static final int DRIVE_CAN_RIGHT1 = 2;
         public static final int DRIVE_CAN_RIGHT2 = 3;
         public static final int DRIVE_PWM_ROTATE = 4;
+        public static final double ROTATE_SPEED_MODIFY = 0.5;
+        public static final double MOTOR_SPEED_MODIFY = 0.5;
     }
     public static class Controls{
 
