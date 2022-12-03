@@ -6,23 +6,20 @@ package frc.robot.commands;
 
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
-public class Drive extends CommandBase {
+public class Forward extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final DriveTrain m_drivetrain;
-  private final Joystick m_joystick;
+
   /**
    * Creates a new ExampleCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public Drive(DriveTrain dt, Joystick j) {
+  public Forward(DriveTrain dt) {
     m_drivetrain = dt;
-    m_joystick = j;
-
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(dt);
   }
@@ -34,14 +31,15 @@ public class Drive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-
-    m_drivetrain.drive(m_joystick.getX(), m_joystick.getY(), m_joystick.getZ());
-    
+    m_drivetrain.forward(1);
   }
+
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) {}
+  public void end(boolean interrupted) {
+    m_drivetrain.forward(0);
+  }
 
   // Returns true when the command should end.
   @Override

@@ -34,6 +34,12 @@ public class DriveTrain extends SubsystemBase {
   public void drive(double x, double y, double z){
     
   }
+  public void forward(double speed){
+    for(int i = 0; i < 4; i++){
+      driveMotors[i].set(speed);
+    }
+    
+  }
 
   @Override
   public void periodic() {

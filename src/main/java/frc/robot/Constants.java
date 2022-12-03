@@ -35,6 +35,7 @@ public final class Constants {
     public static class Controls{
 
         public static final int CONTROLS_USB_JOYSTICK = 0;
+        public static final int BUTTON_FORWARD = 1;
 
     }
 }
