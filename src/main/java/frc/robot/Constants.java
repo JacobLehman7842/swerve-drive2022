@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.geometry.Translation2d;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -13,7 +15,14 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
     public static class DriveTrain{
+        public static final Translation2d[] motorPositions = {
+            new Translation2d(0, 0),
+            new Translation2d(0, 0), 
+            new Translation2d(0, 0), 
+            new Translation2d(0, 0)
+        };
         public static final int DRIVE_CAN_LEFT1 = 0;
         public static final int DRIVE_CAN_LEFT2 = 1;
         public static final int DRIVE_CAN_RIGHT1 = 2;
