@@ -25,14 +25,14 @@ public class DriveTrain extends SubsystemBase {
     rotate = new VictorSP(Constants.DriveTrain.DRIVE_PWM_ROTATE);
     rotateEncoder = new Encoder(Constants.DriveTrain.DRIVE_DIO_ENCODER1, Constants.DriveTrain.DRIVE_DIO_ENCODER2);
 
-    driveMotors[0] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_LEFT1);
-    driveMotors[1] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_LEFT2);
-    driveMotors[2] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_RIGHT1);
-    driveMotors[3] = new VictorSP(Constants.DriveTrain.DRIVE_CAN_RIGHT2);
+    driveMotors[0] = new VictorSP(Constants.DriveTrain.DRIVE_PWM_LEFT1);
+    driveMotors[1] = new VictorSP(Constants.DriveTrain.DRIVE_PWM_LEFT2);
+    driveMotors[2] = new VictorSP(Constants.DriveTrain.DRIVE_PWM_RIGHT1);
+    driveMotors[3] = new VictorSP(Constants.DriveTrain.DRIVE_PWM_RIGHT2);
     
   }
   public void drive(double x, double y, double z){
-    rotate.set(x*Constants.DriveTrain.ROTATE_SPEED_MODIFY);
+    rotate.set(z*Constants.DriveTrain.ROTATE_SPEED_MODIFY);
     forward(y*Constants.DriveTrain.MOTOR_SPEED_MODIFY);
   }
   public void forward(double speed){

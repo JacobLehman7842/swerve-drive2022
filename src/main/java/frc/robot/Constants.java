@@ -26,10 +26,10 @@ public final class Constants {
             new Translation2d(0, 0), 
             new Translation2d(0, 0)
         };
-        public static final int DRIVE_CAN_LEFT1 = 0;
-        public static final int DRIVE_CAN_LEFT2 = 1;
-        public static final int DRIVE_CAN_RIGHT1 = 2;
-        public static final int DRIVE_CAN_RIGHT2 = 3;
+        public static final int DRIVE_PWM_LEFT1 = 0;
+        public static final int DRIVE_PWM_LEFT2 = 1;
+        public static final int DRIVE_PWM_RIGHT1 = 2;
+        public static final int DRIVE_PWM_RIGHT2 = 3;
         public static final int DRIVE_PWM_ROTATE = 4;
         public static final double ROTATE_SPEED_MODIFY = 0.5;
         public static final double MOTOR_SPEED_MODIFY = 0.5;
