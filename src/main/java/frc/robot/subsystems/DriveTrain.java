@@ -7,6 +7,7 @@ package frc.robot.subsystems;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
+import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
@@ -17,6 +18,7 @@ import frc.robot.Constants;
 public class DriveTrain extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
   private VictorSP[ ] driveMotors = new VictorSP[4];
+  
   private Encoder rotateEncoder;
   private MotorController rotate;
   
@@ -34,6 +36,11 @@ public class DriveTrain extends SubsystemBase {
   public void drive(double x, double y, double z){
     rotate.set(z*Constants.DriveTrain.ROTATE_SPEED_MODIFY);
     forward(y*Constants.DriveTrain.MOTOR_SPEED_MODIFY);
+  }
+  public void drive_full(double x, double y, double z){
+    Translation2d translation = new Translation2d(x*Constants.DriveTrain.MOTOR_SPEED_MODIFY, 
+                                                  y*Constants.DriveTrain.MOTOR_SPEED_MODIFY);
+
   }
   public void forward(double speed){
     for(int i = 0; i < 4; i++){
