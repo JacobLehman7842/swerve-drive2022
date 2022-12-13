@@ -21,7 +21,7 @@ public final class Constants {
         public static final int DRIVE_DIO_ENCODER2 = 1;
         public static final double DRIVE_LENGTH = 0.5588; //meters
         public static final double DRIVE_WIDTH = 0.508; //meters
-        public static final Translation2d[] motorPositions = {
+        public static final Translation2d[] MOTOR_POSITIONS = {
             new Translation2d(-DRIVE_WIDTH/2.0, DRIVE_LENGTH/2.0),
             new Translation2d(-DRIVE_WIDTH/2.0, -DRIVE_LENGTH/2.0), 
             new Translation2d(DRIVE_WIDTH/2.0, DRIVE_LENGTH/2.0), 
@@ -32,7 +32,7 @@ public final class Constants {
         public static final int DRIVE_PWM_RIGHT1 = 2;
         public static final int DRIVE_PWM_RIGHT2 = 3;
         public static final int DRIVE_PWM_ROTATE = 4;
-        public static final double ROTATE_SPEED_MODIFY = 0.5;
+        public static final double ROTATE_SPEED_MODIFY = 0.75;
         public static final double MOTOR_SPEED_MODIFY = 0.5;
     }
     public static class Controls{
